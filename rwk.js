@@ -306,7 +306,7 @@ else if((i==2 && !reverse) || (i==3 && reverse))
 		allench = [top.Ench1,top.Ench2,top.Ench3,top.Ench4,top.Ench5,top.Ench6,top.Ench7,top.Ench8,top.Ench9,top.Ench10,parseInt(top.Weapon/100000,10)-1,parseInt(top.Helmet/100000,10)-1,parseInt(top.Shield/100000,10)-1,parseInt(top.Gauntlets/100000,10)-1,parseInt(top.Mantle/100000,10)-1,parseInt(top.Sleeves/100000,10)-1,parseInt(top.Cast/100000,10)-1,parseInt(top.Leggings/100000,10)-1,parseInt(top.Boots/100000,10)-1,parseInt(top.Heal/100000,10)-1,top.Relic1%1000,top.Relic2%1000,top.Relic3%1000,top.Relic4%1000,top.Relic5%1000,top.Relic6%1000];
 		blehq = [];
 		jj = 0;
-		for(m = 0;m < 26;m++)
+		for(var m = 0;m < 26;m++)
 		{
 			if(allench[m]==24)
 			{
@@ -317,7 +317,7 @@ else if((i==2 && !reverse) || (i==3 && reverse))
 		}
 		allench[blehq[parseInt(Math.random()*10000,10)%jj]]=24;
 		offseter = 0;
-		for(m = 0;m < 26;m++)
+		for(var m = 0;m < 26;m++)
 		{
 			if((allench[m]!=-1 && m >= annuls+offseter) || allench[m]>=32 || allench[m]==26)
 			{
@@ -857,7 +857,7 @@ else if(mode==2)
 			maptilec=0;
 			maptiled=0;
 		}
-		maptilem=maptilem;
+		//maptilem=maptilem;
 		mapoffx=mapposx%200;
 		mapoffy=mapposy%200;
 	}
@@ -1325,9 +1325,9 @@ if(j < NewChat.length-1)
 		subgee=top.ignorelist;
 		amounty=subgee.length;
 		badboy=0;
-		for(var xxi=0;xxi < amounty;xxi++)
+		for(var xxxi=0;xxxi < amounty;xxxi++)
 		{
-			if(subgee[xxi]==mn(NewChatList[2]))
+			if(subgee[xxxi]==mn(NewChatList[2]))
 				badboy=1;
 		}
 		if(!badboy)
@@ -3350,7 +3350,7 @@ return ns;
 }
 function mc(s)
 {
-if(parseInt(s,10)==NaN || s=="undefined" || s==null)
+if(isNaN(parseInt(s,10)) || s=="undefined" || s==null)
 return s;
 ns="";
 njf=0;
@@ -3545,13 +3545,13 @@ hoppf=36;
 }
 else if(hoppa==12)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="";
 hoppd=" Bow";
 }
 else if(hoppa==13)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="";
 hoppd=" Arrow";
 }
@@ -3593,43 +3593,43 @@ hoppd="";
 }
 else if(hoppa==20)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Helmet";
 }
 else if(hoppa==21)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Shield";
 }
 else if(hoppa==22)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Gauntlets";
 }
 else if(hoppa==23)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Mantle";
 }
 else if(hoppa==24)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Sleeves";
 }
 else if(hoppa==25)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Leggings";
 }
 else if(hoppa==26)
 {
-hoppb=top.multi;
+//hoppb=top.multi;
 hoppc="Durability ";
 hoppd=" Boots";
 }
@@ -3663,7 +3663,7 @@ function getitem(itemnumber)
 {
 if(itemnumber==-1)
 return "Nothing";
-var item;
+var item=top.multi;
 itype=parseInt(itemnumber/1000,10)%100;
 inum=parseInt(itemnumber,10)%1000;
 iench=parseInt(itemnumber/100000,10)%100-1;
@@ -4486,7 +4486,7 @@ function up(istring,lastaction)
 		}
 		else if(code == "90")
 		{
-			upchat(o, 0);
+			upchat(o);
 		}
 		else if(code == "91")
 		{
@@ -4790,7 +4790,7 @@ function up(istring,lastaction)
 	if((upwin != -1 && top.GraphicMode == 0) || (upwin == top.WindowMode)) upwindow(upwin);
 	if(top.UpdateLevel)
 	{
-		fLevel = parseFloat((parseFloat(top.Str, 10) + parseFloat(top.Dex, 10) + parseFloat(top.Agi, 10) + parseFloat(top.Dur, 10) + parseFloat(top.Ntl, 10) + parseFloat(top.Cnc, 10) + parseFloat(top.Cnt, 10)) / 140, 10);
+		fLevel = parseFloat((parseFloat(top.Str) + parseFloat(top.Dex) + parseFloat(top.Agi) + parseFloat(top.Dur) + parseFloat(top.Ntl) + parseFloat(top.Cnc) + parseFloat(top.Cnt)) / 140, 10);
 		Levelrem = fLevel / 100;
 		top.Level = parseInt(fLevel / 100, 10);
 		Levelrem -= top.Level;
