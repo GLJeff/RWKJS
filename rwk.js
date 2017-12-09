@@ -1,4 +1,3 @@
-<!--
 function httpspath()
 {
 pathURL = window.location + '';
@@ -5266,4 +5265,4 @@ s_name.innerHTML=top.login;
 top.Timer=setInterval("top.frames.main.dopoll(400)","500");
 setInterval("top.frames.main.pupdate()","1000");
 }
-//-->
+
