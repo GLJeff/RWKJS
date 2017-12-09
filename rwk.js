@@ -1,3 +1,4 @@
+
 function httpspath()
 {
 pathURL = window.location + '';
@@ -187,7 +188,7 @@ else
 domes("figtstrerr32324");
 return;
 }
-for(i=0;i < fightvar.length;i++)
+for(var i=0;i < fightvar.length;i++)
 {
 if((fightvar[i]=="k" && !reverse) || (fightvar[i]=="r" && reverse))
 {
@@ -1099,7 +1100,7 @@ else if(race==12)return "Templar";
 function TSOT(pow)
 {
 ret=10;
-for(x=0;x<pow;x++)
+for(var x=0;x<pow;x++)
 ret*=1.306;
 if(ret > 1999999999)
 return 2000000000;
@@ -1134,7 +1135,7 @@ fsubf="";
 if(NewFightList[0]=="34")
 fsubf+="<i>";
 //fsubf+="&gt;";
-for(y=1;y < NewFightList.length;y++)
+for(var y=1;y < NewFightList.length;y++)
 {
 fsubf+=NewFightList[y];
 if(y+1<NewFightList.length)
@@ -1152,12 +1153,12 @@ function upchat(thecdata)
 if(top.OldChat==null)
 {
 top.OldChat=["",""];
-for(j=0;j<top.ChatSize;j++)
+for(var j=0;j<top.ChatSize;j++)
 	top.OldChat[j]="";
 }
 NewChat=thecdata.split("|");
 stupid = 0;
-for(j=top.ChatSize;j >=0 && stupid < 110;j--)
+for(var j=top.ChatSize;j >=0 && stupid < 110;j--)
 {
 stupid++;
 if(j < NewChat.length-1)
@@ -1190,7 +1191,7 @@ if(j < NewChat.length-1)
 		subgee=top.ignorelist;
 		amounty=subgee.length;
 		badboy=0;
-		for(xxi=0;xxi < amounty;xxi++)
+		for(var xxi=0;xxi < amounty;xxi++)
 		{
 			if(subgee[xxi]==mn(NewChatList[2]))
 				badboy=1;
@@ -1266,7 +1267,7 @@ if(j < NewChat.length-1)
 	else if(NewChatList[0]=="57" || NewChatList[0]=="59")
 	{
 		tempypoo = NewChatList[3].split("!");
-		for(asi=0;asi<12;asi++)
+		for(var asi=0;asi<12;asi++)
 			tempypoo[asi]*=tempypoo[12];
 		if(NewChatList[0]=="57")
 			top.OldChat[j]+="<font color=#CC00CC><b>Stats as Affected Only By Relics</b>";
@@ -1283,7 +1284,7 @@ if(j < NewChat.length-1)
 	{
 		tempypoo = NewChatList[3].split("!");
 		maxit=0;
-		for(sji=0;sji<12;sji++)
+		for(var sji=0;sji<12;sji++)
 		{
 			tempypoo[sji] = parseInt(tempypoo[sji],10);
 			if(tempypoo[sji]>maxit)maxit=tempypoo[sji];
@@ -1324,7 +1325,7 @@ if(j < NewChat.length-1)
 		subgee=top.ignorelist;
 		amounty=subgee.length;
 		badboy=0;
-		for(xxi=0;xxi < amounty;xxi++)
+		for(var xxi=0;xxi < amounty;xxi++)
 		{
 			if(subgee[xxi]==mn(NewChatList[2]))
 				badboy=1;
@@ -1341,7 +1342,7 @@ if(j < NewChat.length-1)
 	{
 		if(NewChatList[0]=="34")
 			top.OldChat[j]+="<i>";
-		for(y=1;y < NewChatList.length;y++)
+		for(var y=1;y < NewChatList.length;y++)
 		{
 			top.OldChat[j]+=NewChatList[y];
 			if(y+1<NewChatList.length)
@@ -1353,7 +1354,7 @@ if(j < NewChat.length-1)
 	else if(NewChatList[0]=="79")
 	{
 		top.OldChat[j]+="<font color=#CC00CC>";
-		for(y=1;y < NewChatList.length;y++)
+		for(var y=1;y < NewChatList.length;y++)
 		{
 			top.OldChat[j]+=NewChatList[y];
 			if(y+1<NewChatList.length)
@@ -1386,7 +1387,7 @@ else
 }
 }
 NewChat="";
-for(j=0;j<top.ChatSize;j++)
+for(var j=0;j<top.ChatSize;j++)
 {
 if(top.OldChat[j]!="")
 	NewChat+="&nbsp;"+top.OldChat[j]+"<br>";
@@ -1602,7 +1603,7 @@ function pollzero(gg, override)
 		}
 		if(gg.target.value == "/ignore")
 		{
-			for(ii = 19; ii >= 0; ii--)
+			for(var ii = 19; ii >= 0; ii--)
 			{
 				if(top.ignorelist[ii] != "")
 				{
@@ -1617,7 +1618,7 @@ function pollzero(gg, override)
 		{
 			top.frames.main.document.getElementById('general').action.options.selectedIndex = 9;
 			top.frames.main.updateaction(top.frames.main.document.getElementById('general').action.options[top.frames.main.document.getElementById('general').action.options.selectedIndex].value, top.frames.main.document.getElementById('general'));
-			for(ii = top.frames.main.document.getElementById('general').target.length - 1; ii >= 0; ii--) domes(top.frames.main.document.getElementById('general').target.options[ii].text);
+			for(var ii = top.frames.main.document.getElementById('general').target.length - 1; ii >= 0; ii--) domes(top.frames.main.document.getElementById('general').target.options[ii].text);
 			gg.target.value = "";
 			return;
 		}
@@ -2114,7 +2115,7 @@ function updatetarget(acttype, inputt,g)
 		g.other.style.display = "inline";
 
 		g.other.length=amount;
-		for(i=0;i < amount;i++)
+		for(var i=0;i < amount;i++)
 		{
 			if(inputt==10)
 			{
@@ -2129,7 +2130,7 @@ function updatetarget(acttype, inputt,g)
 
 					subby=top.inventory;
 					subamt=subby.length-1;
-					for(m=0;m < subamt;m++)
+					for(var m=0;m < subamt;m++)
 					{
 						if(i+10000==subby[m])
 						price*=10;
@@ -2178,7 +2179,7 @@ function updatetarget(acttype, inputt,g)
 		else
 		{
 			g.other.length=amount;
-			for(i=0;i < amount;i++)
+			for(var i=0;i < amount;i++)
 			{
 				g.other.options[i].text=strapper+subarr[i]+stradder;
 				g.other.options[i].value=i;
@@ -2241,7 +2242,7 @@ function updatetarget(acttype, inputt,g)
 
 			g.other.length=100;
 			g.other.selectedIndex=top.ExpPerc;
-			for(i=0;i<100;i++)
+			for(var i=0;i<100;i++)
 			{
 				g.other.options[i].text=i;
 				g.other.options[i].value=i;
@@ -2254,7 +2255,7 @@ function updatetarget(acttype, inputt,g)
 
 			g.other.length=13;
 			g.other.selectedIndex=top.Skill;
-			for(i=0;i<13;i++)
+			for(var i=0;i<13;i++)
 			{
 				g.other.options[i].text=top.skillz[i];
 				g.other.options[i].value=i;
@@ -2270,7 +2271,7 @@ function updatetarget(acttype, inputt,g)
 
 			g.other.length=10;
 			g.other.selectedIndex=top.ChatSize/10-1;
-			for(i=1;i<11;i++)
+			for(var i=1;i<11;i++)
 			{
 				g.other.options[i-1].text=i*10;
 				g.other.options[i-1].value=i*10;
@@ -2869,7 +2870,7 @@ function updateaction(inputt,g)
 
 		subarr=top.clistcur;
 		amount=subarr.length;
-		for(i=0;i < amount;i++)
+		for(var i=0;i < amount;i++)
 		{
 			g.target.options[g.target.options.length] = new Option(subarr[i], i);
 		}			
@@ -2897,7 +2898,7 @@ function updateaction(inputt,g)
 
 		g.target.length=300;
 		g.target.selectedIndex=top.LocX;
-		for(i=0;i < 300;i++)
+		for(var i=0;i < 300;i++)
 		{
 			g.target.options[i].text=i;
 			g.target.options[i].value=i;
@@ -2908,7 +2909,7 @@ function updateaction(inputt,g)
 
 		g.other.length=300;
 		g.other.selectedIndex=top.LocY;
-		for(i=0;i < 300;i++)
+		for(var i=0;i < 300;i++)
 		{
 			g.other.options[i].text=i;
 			g.other.options[i].value=i;
@@ -2921,7 +2922,7 @@ function updateaction(inputt,g)
 		s_targettext.innerHTML="Port: ";
 		g.target.style.display = "inline";
 		g.target.length=30;
-		for(i = 0;i<30;i++)
+		for(var i = 0;i<30;i++)
 		{
 			g.target.options[i].text=top.PortN[i]+" ("+top.PortX[i]+","+top.PortY[i]+")";
 			g.target.options[i].value=i;
@@ -3099,7 +3100,7 @@ function updateaction(inputt,g)
 		subarr=top.clistcur;
 		amount=subarr.length;
 		g.target.length=amount;
-		for(i=0;i < amount;i++)
+		for(var i=0;i < amount;i++)
 		{
 			g.target.options[i].text=subarr[i]+" "+mc(TSOT(i));
 			g.target.options[i].value=i;
@@ -3218,7 +3219,7 @@ upchat(79+"<"+sss+"|");
 }
 function il(s)
 {
-for(jkl=0;jkl<20;jkl++)
+for(var jkl=0;jkl<20;jkl++)
 {
 if(top.ignorelist[jkl]==s)
 {
@@ -3232,7 +3233,7 @@ if(s=="glitchless" || s=="glitchless2")
 domes("Just say 'No' to stupidity.");
 return;
 }
-for(jkl=0;jkl<20;jkl++)
+for(var jkl=0;jkl<20;jkl++)
 {
 if(top.ignorelist[jkl]=="")
 {
@@ -3242,21 +3243,21 @@ if(top.ignorelist[jkl]=="")
 }
 }
 domes(s+" added to ignore list and "+top.ignorelist[19]+" removed due to 20 person max.");
-for(jkl=19;jkl > 0;jkl--)
+for(var jkl=19;jkl > 0;jkl--)
 top.ignorelist[jkl]=top.ignorelist[jkl-1];
 top.ignorelist[0]=s;
 }
 function hl(s)
 {
 flag=0;
-for(i=0;i<20;i++)
+for(var i=0;i<20;i++)
 {
 if(top.hotlist[i]==s)
 	flag=1;
 }
 if(flag==0)
 {
-for(i=19;i > 0;i--)
+for(var i=19;i > 0;i--)
 	top.hotlist[i]=top.hotlist[i-1];
 top.hotlist[0]=s;
 }
@@ -3273,7 +3274,7 @@ chat.other.options[2].text="AUCTION";
 chat.other.options[2].value=2;
 chat.other.options[3].text="EMOTE";
 chat.other.options[3].value=3;
-for(i=0;i < amount;i++)
+for(var i=0;i < amount;i++)
 {
 if(subarr[i]=="R")
 {
@@ -3289,7 +3290,7 @@ function mn(s)
 if(s==null)
 return s;
 ns="";
-for(z=0;z < s.length;z++)
+for(var z=0;z < s.length;z++)
 {
 if(s.charAt(z)=="+")ns+=" ";
 else if(s.charAt(z)=="A")ns+="a";
@@ -3328,7 +3329,7 @@ function ms(s)
 if(s==null)
 return s;
 ns="";
-for(z=0;z < s.length;z++)
+for(var z=0;z < s.length;z++)
 {
 if(s.charAt(z)=="+")ns+=" ";
 else ns+=s.charAt(z);
@@ -3340,7 +3341,7 @@ function mp(s)
 if(s==null)
 return s;
 ns="";
-for(z=0;z < s.length;z++)
+for(var z=0;z < s.length;z++)
 {
 if(s.charAt(z)==" ")ns+="+";
 else ns+=s.charAt(z);
@@ -3353,7 +3354,7 @@ if(parseInt(s,10)==NaN || s=="undefined" || s==null)
 return s;
 ns="";
 njf=0;
-for(z=(s.toString()).length-1;z > 0;z--)
+for(var z=(s.toString()).length-1;z > 0;z--)
 {
 ns=(s.toString()).charAt(z) + ns;
 if(njf++==2)
@@ -3384,7 +3385,7 @@ function upplayers()
 		subarr=top.players;
 		amount=subarr.length-1;
 		g.target.length=amount-1;
-		for(i=1;i < amount;i++)
+		for(var i=1;i < amount;i++)
 		{
 			g.target.options[i-1].text=ms(subarr[i]);
 			g.target.options[i-1].value=subarr[i];
@@ -3396,7 +3397,7 @@ function upplayers()
 		subarr=top.hotlist;
 		amount=subarr.length;
 		g.target.length=g.target.length+amount;
-		for(i=0;i < amount;i++)
+		for(var i=0;i < amount;i++)
 		{
 			if(subarr[i]=="R")
 			{
@@ -3409,7 +3410,7 @@ function upplayers()
 	}
 	if(storedname != "")
 	{
-		for(i = 0;i < g.target.length;i++)
+		for(var i = 0;i < g.target.length;i++)
 		{
 			if(storedname == g.target.options[i].value.toString())
 			{
@@ -3712,7 +3713,7 @@ function upcreatures()
 		subarr=top.creatures;
 		amount=subarr.length-1;
 		g.target.length=amount-1;
-		for(i=1;i < amount;i++)
+		for(var i=1;i < amount;i++)
 		{
 			g.target.options[i-1].text=ms(getcreature(subarr[i]));
 			g.target.options[i-1].value=subarr[i];
@@ -3767,10 +3768,10 @@ function upinventory(shouldi,ughi)
 			}
 			h.length=amount-1;
 			displace=0;
-			for(i=1;i < amount+displace;i++)
+			for(var i=1;i < amount+displace;i++)
 			{
 				skipit=0;
-				for(x=0;x<16;x++)
+				for(var x=0;x<16;x++)
 				{
 					if(itemtog[x]=="Nothing")continue;
 					if(itemtog[x]==subarr[i-displace])
@@ -4320,7 +4321,7 @@ function up(istring,lastaction)
 		{
 			if(top.Players == null) top.Players = "-";
 			players = o.split("-");
-			for(j = 0; j < players.length - 1; j++)
+			for(var j = 0; j < players.length - 1; j++)
 			{
 				if(top.Players == top.Players.replace("-" + players[j] + "-", "-")) top.Players += players[j] + "-";
 			}
@@ -4331,7 +4332,7 @@ function up(istring,lastaction)
 		{
 			if(top.Players == null) top.Players = "-";
 			players = o.split("-");
-			for(j = 0; j < players.length - 1; j++)
+			for(var j = 0; j < players.length - 1; j++)
 			{
 				top.Players = top.Players.replace("-" + players[j] + "-", "-");
 			}
@@ -4348,7 +4349,7 @@ function up(istring,lastaction)
 		{
 			if(top.Creatures == null) top.Creatures = "-";
 			creatures = o.split("-");
-			for(j = 0; j < creatures.length - 1; j++)
+			for(var j = 0; j < creatures.length - 1; j++)
 			{
 				if(top.Creatures == top.Creatures.replace("-" + creatures[j] + "-", "-")) top.Creatures += creatures[j] + "-";
 			}
@@ -4359,7 +4360,7 @@ function up(istring,lastaction)
 			if(top.Creatures == null) top.Creatures = "-";
 			creatures = o.split("-");
 			top.Creatures = "-" + top.Creatures;
-			for(j = 0; j < creatures.length - 1; j++)
+			for(var j = 0; j < creatures.length - 1; j++)
 			{
 				top.Creatures = top.Creatures.replace("-" + creatures[j] + "-", "-");
 			}
